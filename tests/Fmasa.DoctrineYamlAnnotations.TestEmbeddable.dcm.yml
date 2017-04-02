@@ -1,0 +1,7 @@
+Fmasa\DoctrineYamlAnnotations\TestEmbeddable:
+
+    type: embeddable
+
+    fields:
+        value:
+            type: integer

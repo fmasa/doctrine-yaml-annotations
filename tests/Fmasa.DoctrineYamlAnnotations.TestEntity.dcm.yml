@@ -1,0 +1,28 @@
+Fmasa\DoctrineYamlAnnotations\TestEntity:
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    annotations:
+        Fmasa\DoctrineYamlAnnotations\TestAnnotation: { value: 30 }
+
+    fields:
+        foo:
+            type: integer
+            annotations:
+                ann: { value: 10 }
+        bar:
+            type: string
+            annotations:
+                Fmasa\DoctrineYamlAnnotations\TestAnnotation: { value: 20 }
+        baz:
+            type: integer
+
+    embedded:
+        embeddable:
+            class: Fmasa\DoctrineYamlAnnotations\TestEmbeddable
+            annotations:
+                Fmasa\DoctrineYamlAnnotations\TestAnnotation: { value: 40 }
