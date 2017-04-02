@@ -3,6 +3,7 @@
     "description": "Custom annotations for YAML mapping",
     "type": "library",
     "require": {
+        "php": "^7.0",
         "doctrine/orm": "^2.5",
         "symfony/yaml": "^3.2"
     },
