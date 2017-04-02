@@ -115,6 +115,29 @@ class YamlReaderTest extends TestCase
         $this->assertSame(30, $annotation->value);
     }
 
+    /**
+     * @dataProvider configurationProvider
+     */
+    public function testMethodRelatedMethodsReturnsNothing(Configuration $configuration)
+    {
+        $reader = new YamlReader($configuration, ['ann' => TestAnnotation::class]);
+
+        $annotations = $reader->getClassAnnotations(
+            $this->getClass()
+        );
+
+        $this->assertCount(1, $annotations);
+
+        $method = $this->getClass()->getMethod('fooBar');
+
+        $annotation = $reader->getMethodAnnotation($method, TestAnnotation::class);
+        $this->assertNull($annotation);
+
+        $annotations = $reader->getMethodAnnotations($method);
+
+        $this->assertSame([], $annotations);
+    }
+
     public function configurationProvider(): array
     {
         $arguments = [];

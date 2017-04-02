@@ -11,4 +11,8 @@ class TestEntity
 
     private $embeddable;
 
+    public function fooBar()
+    {
+    }
+
 }
