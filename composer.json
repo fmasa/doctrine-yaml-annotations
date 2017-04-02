@@ -8,7 +8,9 @@
         "symfony/yaml": "^3.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^6.0",
+        "satooshi/php-coveralls": "^1.0",
+        "phpunit/phpcov": "^4.0"
     },
     "license": "MIT",
     "authors": [
