@@ -1,6 +1,6 @@
 # Doctrine YAML annotations
-[![Build Status](https://travis-ci.org/fmasa/doctrine-yaml-annotations.svg?branch=master)](https://travis-ci.org/fmasa/doctrine-yaml-annotations)
-[![Coverage Status](https://coveralls.io/repos/github/fmasa/doctrine-yaml-annotations/badge.svg?branch=master)](https://coveralls.io/github/fmasa/doctrine-yaml-annotations?branch=master)
+[![Build Status](https://img.shields.io/travis/fmasa/doctrine-yaml-annotations/master.svg)](https://travis-ci.org/fmasa/doctrine-yaml-annotations)
+[![Coverage Status](https://img.shields.io/coveralls/fmasa/doctrine-yaml-annotations/master.svg)](https://coveralls.io/github/fmasa/doctrine-yaml-annotations?branch=master)
 
 One of the great features of Doctrine 2 is extensibility.
 Doctrine offers multiple ways to specify mapping information,
