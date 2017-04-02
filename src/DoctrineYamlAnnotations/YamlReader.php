@@ -116,7 +116,7 @@ class YamlReader implements Reader
 
     private function loadClass(string $class)
     {
-        if (in_array($class, $this->classes)) {
+        if (isset($this->classes[$class])) {
             return;
         }
 
@@ -141,6 +141,6 @@ class YamlReader implements Reader
             }
         }
 
-        $this->classes[] = $class;
+        $this->classes[$class] = TRUE;
     }
 }
