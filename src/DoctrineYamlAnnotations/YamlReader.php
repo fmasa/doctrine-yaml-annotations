@@ -103,7 +103,7 @@ class YamlReader implements Reader
         $chain = $this->configuration->getMetadataDriverImpl();
         $drivers = $chain instanceof MappingDriverChain ? $chain->getDrivers() : [$chain];
 
-        $this->drivers = $drivers;
+        $this->drivers = [];
 
         foreach ($drivers as $driver) {
             if ($driver instanceof YamlDriver) {
