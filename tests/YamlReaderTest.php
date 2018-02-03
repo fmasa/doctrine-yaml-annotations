@@ -32,6 +32,19 @@ class YamlReaderTest extends TestCase
     /**
      * @dataProvider configurationProvider
      */
+    public function testGetAnnotationFromIdentifierProperty(Configuration $configuration)
+    {
+        $reader = new YamlReader($configuration, ['ann' => TestAnnotation::class]);
+
+        $annotation = $reader->getPropertyAnnotation($this->getClass()->getProperty('id'), TestAnnotation::class);
+
+        $this->assertInstanceOf(TestAnnotation::class, $annotation);
+        $this->assertSame(50, $annotation->value);
+    }
+
+    /**
+     * @dataProvider configurationProvider
+     */
     public function testGetAliasedPropertyAnnotation(Configuration $configuration)
     {
         $reader = new YamlReader($configuration, ['ann' => TestAnnotation::class]);

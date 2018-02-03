@@ -130,13 +130,17 @@ class YamlReader implements Reader
 
             $this->classAnnotations[$class] = $this->getAnnotations($classElement);
 
-            $fields = $classElement['fields'] ?? [];
+            $sections = ['id', 'fields', 'embedded'];
 
-            if(isset($classElement['embedded'])) {
-                $fields = array_merge($fields, $classElement['embedded']);
+            $properties = [];
+
+            foreach ($sections as $section) {
+                if (isset($classElement[$section])) {
+                    $properties = array_merge($properties, $classElement[$section]);
+                }
             }
 
-            foreach ($fields as $propertyName => $field) {
+            foreach ($properties as $propertyName => $field) {
                 $this->propertyAnnotations[$class][$propertyName] = $this->getAnnotations($field);
             }
         }

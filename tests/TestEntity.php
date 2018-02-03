@@ -5,6 +5,8 @@ namespace Fmasa\DoctrineYamlAnnotations;
 class TestEntity
 {
 
+    private $id;
+
     private $foo;
 
     private $bar;

@@ -5,6 +5,8 @@ Fmasa\DoctrineYamlAnnotations\TestEntity:
             type: integer
             generator:
                 strategy: AUTO
+            annotations:
+                Fmasa\DoctrineYamlAnnotations\TestAnnotation: { value: 50 }
 
     annotations:
         Fmasa\DoctrineYamlAnnotations\TestAnnotation: { value: 30 }
