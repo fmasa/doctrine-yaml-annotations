@@ -9,12 +9,14 @@ cache:
 php:
   - 7.0
   - 7.1
+  - 7.2
 
 matrix:
   include:
     - php: 7.0
     - php: 7.1
       env: COVERAGE="--coverage-clover build/logs/clover.xml"
+    - php: 7.2
 
 before_install:
   - travis_retry composer self-update
